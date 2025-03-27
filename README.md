@@ -1,4 +1,4 @@
-# Node MVC Service (Repo Classical Architecture)
+# Node MVC Service Repo (Classical Architecture)
 ## Project Overview
 
 This is a Node.js starter app following the Classical Architecture Pattern with:
