@@ -1,4 +1,4 @@
-### Node MVC Service (Repo Classical Architecture)
+# Node MVC Service (Repo Classical Architecture)
 ## Project Overview
 
 This is a Node.js starter app following the Classical Architecture Pattern with:
@@ -42,20 +42,20 @@ This is a Node.js starter app following the Classical Architecture Pattern with:
 
 ## Getting Started
 
-# Clone the repository
+### Clone the repository
 
 ```bash
 git clone https://github.com/your-repo/starter-app.git
 cd starter-app
 ```
 
-# Install dependencies
+### Install dependencies
 
 ```bash
 npm install
 ```
 
-# Configure Environment Variables
+### Configure Environment Variables
 
 Create a .env file in the root directory and add: (follow env.example strongly)
 
@@ -70,13 +70,13 @@ DB_HOST=127.0.0.1
 
 ```
 
-# Run Database Migrations
+### Run Database Migrations
 
 ```bash
 npm run migrate
 ```
 
-# Start the Server
+### Start the Server
 
 ```bash
 npm run dev  # or nodemon ./src/app.js
