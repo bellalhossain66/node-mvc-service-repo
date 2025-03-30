@@ -1,5 +1,6 @@
 require('dotenv').config();
 const jwt = require('jsonwebtoken');
+const { verifyToken } = require('../utils/jwt');
 
 module.exports = {
     isValidUser: (req, res, next) => {
@@ -11,12 +12,11 @@ module.exports = {
             return res.status(401).json({ message: 'Unauthorized!' });
         }
 
-        jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
-            if (err) {
-                return res.status(403).json({ message: 'Invaild token!' });
-            }
-            req.isUser = decoded;
-            next();
-        })
+        const decoded = verifyToken(token);
+        if (!decoded) {
+            return res.status(403).json({ message: 'Invalid token!' });
+        }
+        req.isUser = decoded.data;
+        next();
     }
 }

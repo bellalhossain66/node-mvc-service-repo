@@ -7,5 +7,6 @@ const {
 
 router.get('/user', authMiddleware, userController.getUsers);
 router.post('/user', isValidUser, userController.createUser);
+router.post('/user-login', userController.loginUser);
 
 module.exports = router;

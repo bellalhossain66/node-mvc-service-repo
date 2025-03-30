@@ -1,7 +1,7 @@
 const User = require('../models/userModel');
 
-class userRepository{
-    constructor(){
+class userRepository {
+    constructor() {
         this.users = [];
     }
 
@@ -11,6 +11,10 @@ class userRepository{
 
     async create(userData) {
         return User.create(userData);
+    }
+
+    async findOneByEmail(email) {
+        return User.findOne({ where: { email: email } });
     }
 }
 
