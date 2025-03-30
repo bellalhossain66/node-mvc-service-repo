@@ -9,7 +9,7 @@ This is a Node.js starter app following the Classical Architecture Pattern with:
 
 - Layered structure (Controller → Service → Repository → Model)
 
-- Middleware for authentication
+- Middleware for authentication using JWT
 
 ## Folder Structure
 
